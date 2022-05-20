@@ -1,0 +1,16 @@
+.icon {
+  color: gray;
+}
+
+.github:hover {
+  color: #fafafa;
+  transition: 0.5s ease-in;
+}
+.linkedin:hover {
+  color: #0e76a8;
+  transition: 0.5s ease-in;
+}
+.envelope:hover {
+  color: white;
+  transition: 0.5s ease-in;
+}

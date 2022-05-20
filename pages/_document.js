@@ -1,6 +1,4 @@
 import Document, { Html, Main, NextScript, Head } from "next/document";
-import { useDebugValue } from "react/cjs/react.production.min";
-
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
