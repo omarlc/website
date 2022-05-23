@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Head from "next/head";
 import Layout from "../components/styles/Layout.styled";
 import Socials from "../components/Socials";
-
+import Presence from "../components/Presence";
+import Waving from "../components/styles/Waving.styled";
 const MainContainer = styled.main`
   background-color: #121213;
   width: 100%;
@@ -29,7 +30,12 @@ export default function Home() {
       </Head>
       <Layout>
         <MainContainer>
-          <h1>Hello I'm Omar 👋</h1>
+          <h1>
+            Hello I'm Omar
+            <Waving />
+            <Presence />
+          </h1>
+
           <p>computer systems engenieer, based on México 🇲🇽 </p>
           <p>
             i like to learn new things and build projects with that knowledge.
