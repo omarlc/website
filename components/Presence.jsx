@@ -1,6 +1,10 @@
+import dynamic from "next/dynamic";
 import { StyledPresence } from "./styles/Presence.styled";
 import { useLanyard } from "react-use-lanyard";
-import ReactTooltip from "react-tooltip";
+
+const ReactTooltip = dynamic(() => import("react-tooltip"), {
+  ssr: false,
+});
 
 const Presence = () => {
   const lanyard = useLanyard({
@@ -20,6 +24,7 @@ const Presence = () => {
         effect="solid"
         textColor="#FFF"
       >
+        Discord Presence:{" "}
         {lanyard?.data?.data?.discord_status.charAt(0).toUpperCase() +
           lanyard?.data?.data?.discord_status.slice(1)}
       </ReactTooltip>

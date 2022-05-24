@@ -1,15 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-const StyledNavbarLink = ({ as, href, children, className }) => {
-  return (
-    <Link href={href} as={as} passHref>
-      <a className={className}>{children}</a>
-    </Link>
-  );
-};
-
-export const NavbarLink = styled(StyledNavbarLink)`
+const NavLink = styled.a`
   color: white;
   padding: 8px 10px;
   border-radius: 25px;
@@ -20,6 +12,12 @@ export const NavbarLink = styled(StyledNavbarLink)`
     transition: 0.25s ease-in-out;
   }
 `;
+
+export const NextLink = ({ href, as, children }) => (
+  <Link href={href} passHref as={as}>
+    <NavLink>{children}</NavLink>
+  </Link>
+);
 
 export const StyledNavbar = styled.nav`
   display: flex;

@@ -1,24 +1,22 @@
 import Link from "next/link";
-import { StyledNavbar, NavbarLink } from "./styles/Navbar.styled";
+import { StyledNavbar, NextLink } from "./styles/Navbar.styled";
+
+const pages = [
+  { name: "Home", href: "/" },
+  { name: "Projects", href: "/projects" },
+  { name: "Photography", href: "/photo" },
+  { name: "Blog", href: "/blog" },
+  { name: "About", href: "/about" },
+];
 
 const Navbar = () => {
   return (
     <StyledNavbar>
-      <NavbarLink href="/">
-        <a>Home</a>
-      </NavbarLink>
-      <NavbarLink href="/projects">
-        <a>Projects</a>
-      </NavbarLink>
-      <NavbarLink href="/photo">
-        <a>Photography</a>
-      </NavbarLink>
-      <NavbarLink href="/blog">
-        <a>Blog</a>
-      </NavbarLink>
-      <NavbarLink href="/about">
-        <a>About</a>
-      </NavbarLink>
+      {pages.map(({ name, href }) => (
+        <NextLink key={href} href={href}>
+          {name}
+        </NextLink>
+      ))}
     </StyledNavbar>
   );
 };
