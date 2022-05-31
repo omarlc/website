@@ -7,6 +7,7 @@ import avatar from "../public/images/Avatar.jpg";
 import { useTheme } from "styled-components";
 import {
   AvatarContainer,
+  CenteredDiv,
   StyledAvatar,
 } from "../components/styles/Avatar.styled";
 
@@ -18,19 +19,21 @@ export default function Home() {
         <title>Omar López</title>
       </Head>
       <Layout>
-        <AvatarContainer>
-          <StyledAvatar
-            src={avatar}
-            alt="Omar &amp; Horus"
-            width={250}
-            height={250}
-            objectFit={"contain"}
-          />
-        </AvatarContainer>
+        <CenteredDiv>
+          <AvatarContainer>
+            <StyledAvatar
+              src={avatar}
+              alt="Omar &amp; Horus"
+              width={250}
+              height={250}
+              objectFit={"contain"}
+            />
+            <Presence />
+          </AvatarContainer>
+        </CenteredDiv>
         <h1>
           Hello, I'm Omar
           <Waving />
-          <Presence />
         </h1>
         <p>Computer Systems Engineer, based in México 🇲🇽</p>
         <p style={{ color: theme.colors.primary, fontWeight: "600" }}>

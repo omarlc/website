@@ -1,11 +1,14 @@
 import styled, { css } from "styled-components";
-
+// TODO: Change colors for theme variables.
 export const StyledPresence = styled.div`
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  display: inline-block;
-  margin-left: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 6px solid #121213;
+
   ${({ status }) => {
     switch (status) {
       case "online":
@@ -14,20 +17,20 @@ export const StyledPresence = styled.div`
         `;
       case "idle":
         return css`
-          box-shadow: inset -15px -15px 0 0 #faa81a;
+          background-color: #121213;
+          box-shadow: inset -20px -20px 0 0 #faa81a;
         `;
       case "dnd":
         return css`
-          position: relative;
           background-color: #ed4245;
           &::before {
             position: absolute;
             background-color: #121213;
-            width: 40px;
-            height: 15px;
+            width: 50px;
+            height: 14px;
             content: "";
             left: 5px;
-            top: 18px;
+            top: 22px;
             border-radius: 25px;
           }
         `;

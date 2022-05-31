@@ -6,12 +6,13 @@ export const StyledAvatar = styled(Image)`
 `;
 
 export const AvatarContainer = styled.div`
-  margin-top: 20px;
+  width: 250px;
+  height: 250px;
+  position: relative;
+`;
 
-  @media screen and (min-width: 300px) and (max-width: 635px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: ease all 2s;
-  }
+export const CenteredDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

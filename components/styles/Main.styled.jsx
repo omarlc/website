@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Main = styled.main`
   width: 100%;
-  margin: 40px 0px;
+  margin: 30px 0px;
   h1 {
     font-size: 3.75rem;
     color: #fff;
@@ -13,5 +13,6 @@ export const Main = styled.main`
 
   p {
     color: #fff;
+    max-width: 75ch;
   }
 `;
