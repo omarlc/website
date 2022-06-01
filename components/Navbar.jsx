@@ -4,8 +4,8 @@ import { StyledNavbar, NextLink } from "./styles/Navbar.styled";
 const pages = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "/projects" },
-  { name: "Photography", href: "/photo" },
-  { name: "Blog", href: "/blog" },
+  // { name: "Photography", href: "/photo" },
+  // { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
 ];
 

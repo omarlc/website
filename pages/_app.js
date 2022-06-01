@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     background-color: #121214;
     scroll-behavior: smooth;
+    background-image: url('images/bg.svg')
   }
 
   html { 
