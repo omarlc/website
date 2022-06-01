@@ -36,10 +36,7 @@ export const StyledPresence = styled.div`
         `;
       case "offline":
         return css`
-          display: inline-block;
-          box-sizing: border-box;
-          border: 0.6em solid #747f8c;
-          position: relative;
+          background-color: #747f8c;
         `;
     }
   }};
